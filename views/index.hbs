@@ -1,0 +1,23 @@
+<a href="/create">Nowy</a>
+<a href="/create-file">Nowy Plik</a>
+
+<dialog open>
+    <p>Greetings, one and all!</p>
+    <form method="dialog" action="/create-file">
+        <input type="text" name="name">
+        <button type="submit">OK</button>
+    </form>
+</dialog>
+
+{{#each lista}}
+{{#if isDir}}
+<div class="dir">
+    <p>{{name}}</p>
+</div>
+
+{{else}}
+<div>
+    <p>{{name}}</p>
+</div>
+{{/if}}
+{{/each}}
